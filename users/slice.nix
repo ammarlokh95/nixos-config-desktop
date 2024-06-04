@@ -26,6 +26,7 @@
       nodejs_22
       (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       unzip
+      obsidian
     ];
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
     # plain files is through 'home.file'.
@@ -40,10 +41,6 @@
     };
   };
   
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "obsidian"
-    ];
   programs.home-manager.enable = true;
 
   fonts.fontconfig.enable = true;
