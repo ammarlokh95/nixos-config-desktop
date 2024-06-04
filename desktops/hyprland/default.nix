@@ -1,12 +1,17 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    # window picker
     rofi-wayland
     dunst
+    # notification manager
     libnotify
+    # wifi manager
     networkmanagerapplet
-    swww
+    # screensharing
     pipewire
+    wireplumber
+    # lock screen
     hyprlock
   ];
   xdg.portal = {
@@ -33,10 +38,13 @@
     };
     waybar = {
       enable = true;
-
     };
+    
   };
+
+  
   imports = [
-  ./config.nix
+    ./config.nix
+    ./services.nix
   ]; 
 }

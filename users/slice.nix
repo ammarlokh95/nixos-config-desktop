@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, lib, inputs, ... }:
 
 {
   imports = [
@@ -15,6 +15,7 @@
     # want to update the value, then make sure to first check the Home Manager
     # release notes.
     stateVersion = "23.11"; # Please read the comment before changing.
+    
 
     packages = with pkgs; [
       rustup
@@ -38,7 +39,11 @@
       VISUAL = "nvim";
     };
   };
-
+  
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "obsidian"
+    ];
   programs.home-manager.enable = true;
 
   fonts.fontconfig.enable = true;
