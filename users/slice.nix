@@ -18,15 +18,19 @@
     
 
     packages = with pkgs; [
-      rustup
       librewolf
       fzf
       ripgrep
       wezterm
-      nodejs_22
       (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       unzip
       obsidian
+
+      # Programming languages:
+      zig
+      go
+      rustup
+      nodejs_22
     ];
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
     # plain files is through 'home.file'.

@@ -267,8 +267,8 @@
         cssls.enable = true; # CSS
         tailwindcss.enable = true; # TailwindCSS
         html.enable = true; # HTML
-        astro.enable = true; # AstroJS
-        phpactor.enable = true; # PHP
+        astro.enable = false; # AstroJS
+        phpactor.enable = false; # PHP
         svelte.enable = false; # Svelte
         vuels.enable = false; # Vue
 
@@ -288,10 +288,10 @@
         bashls.enable = true;
 
         # C/C++
-        clangd.enable = true;
+        clangd.enable = false;
 
         # C#
-        csharp-ls.enable = true;
+        csharp-ls.enable = false;
 
         # Lua
         lua-ls = {
@@ -301,9 +301,19 @@
 
         # Rust
         rust-analyzer = {
-          enable = true;
+          enable = false;
           installRustc = true;
           installCargo = true;
+        };
+        
+        # zig
+        zls = {
+          enable = true;
+        };
+
+        # Go
+        gopls = {
+          enable = true;
         };
       };
     };
