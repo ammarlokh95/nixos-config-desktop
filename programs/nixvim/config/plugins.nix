@@ -152,10 +152,10 @@
     # Code snippets
     luasnip = {
       enable = true;
-      #extraConfig = {
-      #  enable_autosnippets = true;
-      #  store_selection_keys = "<Tab>";
-      #};
+      extraConfig = {
+       enable_autosnippets = true;
+       store_selection_keys = "<Tab>";
+      };
     };
 
     # Easily toggle comments
@@ -190,7 +190,7 @@
       registrations = {
         "<leader>fg" = "Find Git files with telescope";
         "<leader>fw" = "Find text with telescope";
-        "<leader>ff" = "Find files with telescope";
+        "<leader><space>" = "Find files with telescope";
       };
     };
 
@@ -244,7 +244,7 @@
         };
       };
       window = {
-        width = 40;
+        width = 30;
         height = 15;
         autoExpandWidth = false;
         mappings = {
@@ -638,12 +638,6 @@
   #   	return notify(message, level, merged_opts)
   #   end
   # '';
-
-  # extraPlugins = with pkgs.vimPlugins; [
-  #   vim-be-good
-  #   headlines-nvim
-  #   # accelerated-jk
-  # ];
 
   extraPlugins = with pkgs.vimPlugins;
   [
