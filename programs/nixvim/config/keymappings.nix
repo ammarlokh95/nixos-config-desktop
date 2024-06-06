@@ -160,6 +160,43 @@
         noremap = true;
       };
     }
+
+    {
+      mode = "n";
+      key = "<M-k>";
+      action = ":move-2<CR>";
+      options = {
+        desc = "move current line up";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<M-j>";
+      action = ":move+<CR>";
+      options = {
+        desc = "move current line up";
+      };
+    }
+
+    {
+      mode = "v";
+      key = "<M-k>";
+      action = ":m '<-2<CR>gv=gv";
+    }
+
+    {
+      mode = "v";
+      key = "<M-j>";
+      action = ":m '>+1<CR>gv=gv";
+    }
+
+    {mode = "n"; key="oo"; action = "o<esc>"; }
+
+    {mode = "n"; key="OO"; action = "O<esc>"; }
+
+
   ];
+
 };
 }

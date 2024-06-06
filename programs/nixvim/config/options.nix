@@ -18,7 +18,8 @@
     softtabstop = 0;
     expandtab = true;
     smarttab = true;
-
+    autoindent = true;
+    cursorlineopts = "number";
     # System clipboard support, needs xclip/wl-clipboard
     clipboard = "unnamedplus";
 
@@ -28,11 +29,8 @@
     # Show line and column when searching
     ruler = true;
 
-    # Global substitution by default
-    gdefault = true;
-
     # Start scrolling when the cursor is X lines away from the top/bottom
-    scrolloff = 5;
+    scrolloff = 8;
   };
 
   userCommands = {

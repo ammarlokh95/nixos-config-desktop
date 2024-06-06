@@ -25,7 +25,9 @@
       (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       unzip
       obsidian
-
+      # Audio control
+      pavucontrol
+      
       # Programming languages:
       zig
       go
