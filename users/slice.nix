@@ -25,6 +25,8 @@
       (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       unzip
       obsidian
+      discord
+
       # Audio control
       pavucontrol
 
@@ -56,7 +58,6 @@
     bat = {
       enable = true;
     };
-
     eza = {
       enable = true;
       enableZshIntegration = true;
