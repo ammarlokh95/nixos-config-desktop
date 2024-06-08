@@ -141,7 +141,7 @@
     toggleterm = {
       enable = true;
       settings = {
-        hide_numbers = false;
+        hide_numbers = true;
         autochdir = true;
         close_on_exit = true;
         direction = "horizontal";

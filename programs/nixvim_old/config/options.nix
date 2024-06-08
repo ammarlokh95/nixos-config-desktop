@@ -19,7 +19,6 @@
     expandtab = true;
     smarttab = true;
     autoindent = true;
-    cursorlineopts = "number";
     # System clipboard support, needs xclip/wl-clipboard
     clipboard = "unnamedplus";
 

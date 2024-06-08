@@ -27,7 +27,9 @@
       obsidian
       # Audio control
       pavucontrol
-      
+
+      # Neve - neovim
+      inputs.Neve.packages.${pkgs.system}.default  
       # Programming languages:
       zig
       go
@@ -46,7 +48,6 @@
       VISUAL = "nvim";
     };
   };
-  
   programs.home-manager.enable = true;
 
   fonts.fontconfig.enable = true;
