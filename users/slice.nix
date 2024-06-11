@@ -26,6 +26,9 @@
       unzip
       obsidian
       discord
+      
+      #tmux
+      tmux
 
       # Audio control
       pavucontrol
