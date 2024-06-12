@@ -26,12 +26,11 @@
       unzip
       obsidian
       discord
-      
-      #tmux
-      tmux
 
       # Audio control
       pavucontrol
+      #utils
+      busybox
 
       # Neve - neovim
       inputs.Neve.packages.${pkgs.system}.default  
