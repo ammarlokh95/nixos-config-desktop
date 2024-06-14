@@ -1,4 +1,7 @@
 {pkgs, config, ...}:
+let
+  resurrectDirPath = "~/..config/tmux/resurrect";
+in
 {
   programs.tmux = {
       enable = true;
@@ -7,8 +10,8 @@
         tmuxPlugins.better-mouse-mode
         tmuxPlugins.vim-tmux-navigator
         tmuxPlugins.catppuccin
-        tmuxPlugins.tmux-resurrect
-        tmuxPlugins.tmux-continuum
+        tmuxPlugins.resurrect
+        tmuxPlugins.continuum
         ];
       extraConfig = ''
           set -g default-terminal "screen-256color"
@@ -39,9 +42,18 @@
           bind-key -T copy-mode-vi 'y' send -X copy-selection
 
           unbind -T copy-mode-vi MouseDragEnd1Pane
-          
+
+          set -g @resurrect-dir ${resurrectDirPath}
+          set -g @resurrect-strategy-nvim 'session'
+          set -g @resurrect-strategy-vim 'session'
           set -g @resurrect-capture-pane-contents 'on'
+
+          set -g @resurrect-hook-post-save-all 'sed -i -E "s|(pane.*nvim\s*:)[^;]+;.*\s([^ ]+)$|\1nvim \2|" ${resurrectDirPath}/last'
+          set -g @resurrect-processes '"~nvim"'
+
           set -g @continuum-restore 'on'
+          set -g @continuum-boot 'on'
+          set -g @continuum-save-interval '10'
 
           set -g @catppuccin_flavour 'mocha'
         '';
