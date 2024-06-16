@@ -42,8 +42,6 @@
 
             "$mod, Delete, exec, hyprlock"
             "$mod+SHIFT, Delete, exec, sleep 0.1 && systemctl hibernate || loginctl hibernate"
-            "$mod + w, j, exec, $w1"
-            "$mod + w, k, exec, $w2"
             "$mod, S, exec, hyprshot -m region"
          ]
           
@@ -90,6 +88,16 @@
           binde = , k, resizeactive, 0 -10
           binde = , j, resizeactive, 0 10
           bind = , escape, submap, reset
+          submap = reset
+
+          # change wallpaper
+          bind = $mod SHIFT, W, submap, cwall
+
+          submap = cwall
+          binde = , 1, exec, $w1 
+          binde = , 2, exec, $w2 
+          bind = , escape, submap, reset
+
           submap = reset
           '';
       };
