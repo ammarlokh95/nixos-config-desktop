@@ -10,6 +10,8 @@
       ${pkgs.waybar}/bin/waybar &
 
       ${pkgs.dunst}/bin/dunst &
+
+      ${pkgs.udiskie}/bin/udiskie &
     '';
   in
   {
@@ -39,9 +41,10 @@
             "$mod SHIFT, j, movewindow, d"
 
             "$mod, Delete, exec, hyprlock"
-            "$mod+SHIFT, Delete, exec, sleep 0.1 && systemctl suspend || loginctl suspend"
-            "$mod + w, 1, exec, $w1"
-            "$mod + w, 2, exec, $w2"
+            "$mod+SHIFT, Delete, exec, sleep 0.1 && systemctl hibernate || loginctl hibernate"
+            "$mod + w, j, exec, $w1"
+            "$mod + w, k, exec, $w2"
+            "$mod, S, exec, hyprshot -m region"
          ]
           
           ++ (

@@ -6,13 +6,26 @@
     dunst
     # notification manager
     libnotify
+
     # wifi manager
     networkmanagerapplet
+
     # screensharing
     pipewire
     wireplumber
+
     # lock screen
     hyprlock
+
+    # Screenshot
+    hyprshot
+
+    # auto mount usb
+    udiskie
+
+    # clipboard 
+    wl-clipboard
+    wl-clipboard-x11
   ];
   xdg.portal = {
     enable = true;
@@ -39,7 +52,6 @@
     waybar = {
       enable = true;
     };
-    
   };
 
   

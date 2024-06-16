@@ -25,7 +25,7 @@ services = {
           }
           {
             timeout = 1800;
-            on-timeout = "systemctl suspend";
+            on-timeout = "systemctl hibernate";
           }
         ];
       };
