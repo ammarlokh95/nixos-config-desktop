@@ -13,6 +13,7 @@ in
         tmuxPlugins.resurrect
         tmuxPlugins.continuum
         ];
+      baseIndex= 1; 
       extraConfig = ''
           set -g default-terminal "screen-256color"
           

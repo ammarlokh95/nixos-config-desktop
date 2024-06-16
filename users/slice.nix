@@ -31,6 +31,9 @@
       pavucontrol
       #utils
       busybox
+      gwenview
+      btop
+      vlc
 
       # Neve - neovim
       inputs.Neve.packages.${pkgs.system}.default  
