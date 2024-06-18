@@ -18,6 +18,8 @@
     
 
     packages = with pkgs; [
+      # misc
+      gimp
       librewolf
       fzf
       ripgrep
