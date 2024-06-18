@@ -20,7 +20,6 @@
     packages = with pkgs; [
       # misc
       gimp
-      librewolf
       fzf
       ripgrep
       wezterm
@@ -28,6 +27,7 @@
       unzip
       obsidian
       discord
+      brave
 
       # Audio control
       pavucontrol
