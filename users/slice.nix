@@ -19,16 +19,15 @@
 
     packages = with pkgs; [
       # misc
+    arkpandora_ttf
+      brave
+      discord
+      doublecmd
       gimp
-      fzf
       ripgrep
-      wezterm
       (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       unzip
       obsidian
-      discord
-      brave
-
       # Audio control
       pavucontrol
       #utils
@@ -36,6 +35,7 @@
       gwenview
       btop
       vlc
+      gzip
 
       # Neve - neovim
       inputs.Neve.packages.${pkgs.system}.default  
