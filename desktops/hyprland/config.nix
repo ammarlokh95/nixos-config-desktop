@@ -13,6 +13,13 @@
 
       ${pkgs.udiskie}/bin/udiskie &
     '';
+
+    reloadWaybar = pkgs.pkgs.writeShellScriptBin "waybar-rl" ''
+      #!/usr/bin/env zsh
+      echo "Reloading waybar"
+      killall waybar 
+      ${pkgs.waybar}/bin/waybar &
+    '';
   in
   {
   wayland.windowManager.hyprland = {
@@ -24,6 +31,27 @@
         "$mod" = "SUPER";
         "$w1" = ''hyprctl hyprpaper wallpaper ", ~/Wallpapers/Bonsai-Plant.png"'';
         "$w2" = ''hyprctl hyprpaper wallpaper ", ~/Wallpapers/Sun-Setting-Horizon.png"'';
+        general = { 
+          gaps_out = 5;
+          resize_on_border = true;
+          "col.active_border" = "rgba(00C2cfff) rgba(6600e8ff)";
+          layout = "master";
+        };
+        misc = {
+          force_default_wallpaper = 0;
+          disable_hyprland_logo = true;
+        };
+        # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
+        dwindle = {
+          pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+            preserve_split = true; # You probably want this
+        };
+
+        master = {
+          mfact =  0.75;
+          new_on_top = false;
+          };
+
         bind =
           [
             "$mod, T, exec, $terminal"
@@ -39,10 +67,13 @@
             "$mod SHIFT, l, movewindow, r"
             "$mod SHIFT, k, movewindow, u"
             "$mod SHIFT, j, movewindow, d"
-
+              
+            "$mod, V, togglefloating,"
+            "$mod, P, pseudo," #dwindle
             "$mod, Delete, exec, hyprlock"
             "$mod+SHIFT, Delete, exec, sleep 0.1 && systemctl hibernate || loginctl hibernate"
             "$mod, S, exec, hyprshot -m region"
+            "$mod SHIFT, W, exec, ${reloadWaybar}/bin/waybar-rl"
          ]
           
           ++ (
@@ -75,6 +106,13 @@
         monitor = [
           "HDMI-A-1, 2560x1440@143.91Hz, 0x0, 1"
           "DP-2, 3440x1440@143.97Hz, 2560x0, 1"
+        ];
+        windowrulev2 = [
+          "float, class:(pavucontrol)" 
+          "float, class:(blueman-manager)"
+        ];
+        workspace = [
+          "1, defaultName: coding, default:true, monitor:HDMI-A-1, layoutopt:orientation:top" 
         ];
       };
       
