@@ -10,7 +10,6 @@
   home = {
     username = "slice";
     homeDirectory = "/home/slice";
-
     # You should not change this value, even if you update Home Manager. If you do
     # want to update the value, then make sure to first check the Home Manager
     # release notes.
@@ -131,7 +130,21 @@
       enable = true;
       autosuggestion.enable = true;
       enableCompletion = true;
-      oh-my-zsh.enable = true;
+      syntaxHighlighting = {
+        enable = true;
+        highlighters = [
+        "main"
+        "brackets"
+        "pattern"
+        "regexp"
+        "cursor"
+        "root"
+        "line"
+        ];
+      };
+      shellAliases = {
+        cd = "z";
+        };
       initExtra = ''
         echo ".zshrc ran"
       '';

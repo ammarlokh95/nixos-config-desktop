@@ -35,7 +35,7 @@
           gaps_out = 5;
           resize_on_border = true;
           "col.active_border" = "rgba(00C2cfff) rgba(6600e8ff)";
-          layout = "master";
+          layout = "dwindle";
         };
         misc = {
           force_default_wallpaper = 0;
