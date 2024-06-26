@@ -26,10 +26,14 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, Neve, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixvim, Neve, ... }@inputs:
   let
+      inherit (self) outputs;
+
+      system = "x86_64-linux";
       pkgs = import nixpkgs { 
-          system= "x86_64-linux";
+          inherit system;
+
           config = {
             allowUnfree= true;
           };
@@ -38,13 +42,19 @@
     {
       homeConfigurations."slice" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [ ./users/slice.nix ];
 
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
+        modules = [ ./users/slice.nix ];
         extraSpecialArgs = {inherit inputs;};
       };
+
+      nixosConfigurations = {
+        slicenixos = nixpkgs.lib.nixosSystem {
+          specialArgs = {inherit system inputs outputs;};
+
+          modules = [
+            ./nixos/configuration.nix
+            ];
+          };
+        };
     };
 }

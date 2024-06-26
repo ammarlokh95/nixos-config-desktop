@@ -104,15 +104,16 @@
 
         exec-once = ''${startupScript}/bin/start'';
         monitor = [
-          "HDMI-A-1, 2560x1440@143.91Hz, 0x0, 1"
-          "DP-2, 3440x1440@143.97Hz, 2560x0, 1"
+          "DP-2, 3440x1440@143.97Hz, 0x0, 1"
+          "HDMI-A-1, 2560x1440@143.91Hz, 3440x0, 1"
         ];
         windowrulev2 = [
           "float, class:(pavucontrol)" 
           "float, class:(blueman-manager)"
         ];
         workspace = [
-          "1, defaultName: coding, default:true, monitor:HDMI-A-1, layoutopt:orientation:top" 
+          "1,  default:true, monitor:DP-2" 
+          "2,  default:true, monitor:HDMI-A-1" 
         ];
       };
       

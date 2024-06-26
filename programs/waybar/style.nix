@@ -44,14 +44,14 @@ border: none;
     color: @textcolor1;
     }
 
-#workspaces button {
-    padding: 0px 5px;
-    margin: 4px 3px;
-    border-radius: 15px;
-    border: 0px;
-    background: @workspacesbackground2;
-    color: @textcolor3;
-    transition: all 0.3s ease-in-out;
+    #workspaces button {
+      padding: 0px 5px;
+      margin: 4px 3px;
+      border-radius: 15px;
+      border: 0px;
+      background: @workspacesbackground2;
+      color: @textcolor3;
+      transition: all 0.3s ease-in-out;
     }
 
     #workspaces button.active {
@@ -75,9 +75,9 @@ border: none;
     tooltip {
       border-radius: 10px;
       background-color: @backgroundlight;
-    opacity:0.8;
-    padding:20px;
-    margin:0px;
+      opacity:0.8;
+      padding:20px;
+      margin:0px;
     }
 
     tooltip label {

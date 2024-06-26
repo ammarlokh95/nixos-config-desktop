@@ -1,6 +1,5 @@
 { pkgs, lib, inputs, ... }:
-
-{
+  {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
     ../programs
@@ -21,12 +20,13 @@
     arkpandora_ttf
       brave
       discord
-      doublecmd
       gimp
       ripgrep
       (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       unzip
       obsidian
+      xfce.thunar
+      xfce.thunar-volman
       # Audio control
       pavucontrol
       #utils
@@ -44,6 +44,7 @@
       rustup
       nodejs_22
       python312
+      lua
     ];
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
     # plain files is through 'home.file'.

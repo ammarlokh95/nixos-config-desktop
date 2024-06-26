@@ -15,15 +15,15 @@
   };
 
   hypr-workspaces = {
-    active-only = false;
-    all-outputs = true;
-    format = " ";
+    active-only = true;
+    all-outputs = false;
+    format = "{name}";
     move-to-monitor = true; 
     on-click = "activate";
 
     persistent-workspaces = {
-      "HDMI-A-1" = 5;
-      "DP-2" = 3;
+      "DP-2" = [1 3 5];
+      "HDMI-A-1" = [2 4 6];
     };
   }; 
   
