@@ -10,7 +10,7 @@ in
         position = "top";
         modules-left = ["custom/appmenu" "hyprland/workspaces"];
         modules-center = [  "clock" "hyprland/window"];
-        modules-right = [ "idle_inhibitor" "pulseaudio" "network" "bluetooth"  ];
+        modules-right = [ "idle_inhibitor" "pulseaudio" "network" "bluetooth" "custom/exit" ];
         "group/hardware" = modules.gr-hardware;
         "cpu"= modules.cpu;
         "memory"= modules.memory;
@@ -23,6 +23,7 @@ in
         "clock" = modules.clock;
         "custom/appmenu" = modules.appmenu;
         "idle_inhibitor" =  modules.idle_inhibitor;
+        "custom/exit" = modules.custom-exit;
       };
     };
     style = style.style;

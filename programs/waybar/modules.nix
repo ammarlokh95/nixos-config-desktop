@@ -106,5 +106,10 @@
     on-click-right = "hyprlock";
   };
 
-
+   # Power Menu
+  custom-exit = {
+    format = "";
+    on-click = "wlogout";
+    tooltip-format = "Power Menu";
+  };
 }

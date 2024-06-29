@@ -67,8 +67,21 @@
             "$mod SHIFT, l, movewindow, r"
             "$mod SHIFT, k, movewindow, u"
             "$mod SHIFT, j, movewindow, d"
-              
-            "$mod, V, togglefloating,"
+
+            # GROUPS  
+            "$mod, G, togglegroup"
+            "$mod, LEFT, moveintogroup, l"
+            "$mod, RIGHT, moveintogroup, r"
+            "$mod, UP, moveintogroup, u"
+            "$mod, DOWN, moveintogroup, d"
+            "$mod SHIFT, LEFT,  moveoutofgroup, l"
+            "$mod SHIFT, RIGHT, moveoutofgroup, r"
+            "$mod SHIFT, UP,    moveoutofgroup, u"
+            "$mod SHIFT, DOWN,  moveoutofgroup, d" 
+            "$mod SHIFT, <, changegroupactive"
+            "$mod SHIFT, >, changegroupactive"
+            
+            "$mod, F, togglefloating,"
             "$mod, P, pseudo," #dwindle
             "$mod, Delete, exec, hyprlock"
             "$mod+SHIFT, Delete, exec, sleep 0.1 && systemctl hibernate || loginctl hibernate"

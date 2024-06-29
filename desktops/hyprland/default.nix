@@ -56,5 +56,6 @@
   imports = [
     ./config.nix
     ./services.nix
+    ./wlogout
   ]; 
 }

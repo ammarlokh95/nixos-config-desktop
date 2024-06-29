@@ -53,6 +53,11 @@
       recursive = true;
     };
 
+    file."./.config/wlogout/" = {
+       source = ../desktops/hyprland/wlogout/icons;
+       recursive = true;
+    };
+
     sessionVariables = {
       EDITOR = "nvim";
       VISUAL = "nvim";
