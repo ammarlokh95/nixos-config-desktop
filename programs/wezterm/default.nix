@@ -22,33 +22,33 @@
       config.keys = {
           {
             key = "|",
-            mods = "LEADER|SHIFT",
+            mods = "CTRL|SHIFT",
             action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
           },        
           {
             key = "-",
-            mods = "LEADER",
+            mods = "CTRL|SHIFT",
             action = act.SplitVertical { domain = 'CurrentPaneDomain' },
           },
           {
-            key = 'h',
-            mods = 'LEADER',
+            key = 'Left',
+            mods = 'CTRL|SHIFT',
             action = act.AdjustPaneSize { 'Left', 5 },
           },
           {
-            key = 'j',
-            mods = 'LEADER',
+            key = 'Down',
+            mods = 'CTRL|SHIFT',
             action = act.AdjustPaneSize { 'Down', 5 },
           },
-          { key = 'k', mods = 'LEADER', action = act.AdjustPaneSize { 'Up', 5 } },
+          { key = 'Up', mods = 'CTRL|SHIFT', action = act.AdjustPaneSize { 'Up', 5 } },
           {
-            key = 'l',
-            mods = 'LEADER',
+            key = 'Right',
+            mods = 'CTRL|SHIFT',
             action = act.AdjustPaneSize { 'Right', 5 },
           },        
           {
             key = 'm',
-            mods = 'LEADER',
+            mods = 'CTRL|SHIFT',
             action = act.TogglePaneZoomState,
           },
           {
