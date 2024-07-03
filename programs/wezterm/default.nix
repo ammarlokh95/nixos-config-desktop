@@ -31,18 +31,18 @@
             action = act.SplitVertical { domain = 'CurrentPaneDomain' },
           },
           {
-            key = 'Left',
+            key = 'LeftArrow',
             mods = 'CTRL|SHIFT',
             action = act.AdjustPaneSize { 'Left', 5 },
           },
           {
-            key = 'Down',
+            key = 'DownArrow',
             mods = 'CTRL|SHIFT',
             action = act.AdjustPaneSize { 'Down', 5 },
           },
-          { key = 'Up', mods = 'CTRL|SHIFT', action = act.AdjustPaneSize { 'Up', 5 } },
+          { key = 'UpArrow', mods = 'CTRL|SHIFT', action = act.AdjustPaneSize { 'Up', 5 } },
           {
-            key = 'Right',
+            key = 'RightArrow',
             mods = 'CTRL|SHIFT',
             action = act.AdjustPaneSize { 'Right', 5 },
           },        
