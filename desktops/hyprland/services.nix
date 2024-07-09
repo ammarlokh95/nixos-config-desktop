@@ -24,7 +24,7 @@ services = {
             on-resume = "hyprctl dispatch dpms on";
           }
           {
-            timeout = 1800;
+            timeout = 6800;
             on-timeout = "systemctl hibernate";
           }
         ];

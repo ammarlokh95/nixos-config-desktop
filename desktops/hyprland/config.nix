@@ -28,7 +28,7 @@
       settings = {
         "$terminal" = "wezterm";
         "$menu" = "rofi -show drun -show-icons";
-        "$mod" = "SUPER";
+        "$mod" = "Alt";
         "$w1" = ''hyprctl hyprpaper wallpaper ", ~/Wallpapers/Bonsai-Plant.png"'';
         "$w2" = ''hyprctl hyprpaper wallpaper ", ~/Wallpapers/Sun-Setting-Horizon.png"'';
         general = { 
