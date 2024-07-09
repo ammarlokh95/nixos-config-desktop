@@ -93,7 +93,7 @@
   };
 
   security.pam.services.hyprlock = { };
-
+  security.polkit.enable = true;
   #####
 
   # services.xserver.desktopManager.plasma5.enable = true;
@@ -137,6 +137,8 @@
     gparted
     gcc
     home-manager
+    lxqt.lxqt-policykit
+    xorg.xhost
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

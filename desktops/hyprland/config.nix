@@ -12,6 +12,7 @@
       ${pkgs.dunst}/bin/dunst &
 
       ${pkgs.udiskie}/bin/udiskie &
+      lxqt-policykit-agent &
     '';
 
     reloadWaybar = pkgs.pkgs.writeShellScriptBin "waybar-rl" ''
